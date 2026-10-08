@@ -5,15 +5,12 @@ import { HealthModule } from './health/health.module';
 import { HttpModule } from './common/http/http.module';
 import { AuthModule } from './auth/auth.module';
 import { OrganizationModule } from './organization/organization.module';
+import { MasterDataModule } from './master-data/master-data.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true, envFilePath: ['.env', '.env.local'] }),
-    DatabaseModule,
-    HttpModule,
-    AuthModule,
-    OrganizationModule,
-    HealthModule,
+    DatabaseModule, HttpModule, AuthModule, OrganizationModule, MasterDataModule, HealthModule,
   ],
 })
 export class AppModule {}
