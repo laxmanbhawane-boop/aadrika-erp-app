@@ -14,6 +14,7 @@ export class MigrationRunnerService implements OnModuleInit {
       ['002_identity','002_identity.sql'],
       ['003_master_data','003_master_data.sql'],
       ['004_crm','004_crm.sql'],
+      ['005_sales','005_sales.sql'],
     ] as const;
     for (const [version, filename] of migrations) {
       const existing = await this.db.query('SELECT version FROM schema_migrations WHERE version = $1', [version]);
