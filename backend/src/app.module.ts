@@ -9,11 +9,6 @@ import { MasterDataModule } from './master-data/master-data.module';
 import { CrmModule } from './crm/crm.module';
 import { SalesModule } from './sales/sales.module';
 import { InventoryModule } from './inventory/inventory.module';
-
-@Module({
-  imports: [
-    ConfigModule.forRoot({ isGlobal: true, envFilePath: ['.env', '.env.local'] }),
-    DatabaseModule, HttpModule, AuthModule, OrganizationModule, MasterDataModule, CrmModule, SalesModule, InventoryModule, HealthModule,
-  ],
-})
+import { ProcurementModule } from './procurement/procurement.module';
+@Module({imports:[ConfigModule.forRoot({isGlobal:true,envFilePath:['.env','.env.local']}),DatabaseModule,HttpModule,AuthModule,OrganizationModule,MasterDataModule,CrmModule,SalesModule,InventoryModule,ProcurementModule,HealthModule]})
 export class AppModule {}
