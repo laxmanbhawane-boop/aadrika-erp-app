@@ -1,0 +1,2 @@
+export interface AuthUser { id: string; organizationId: string; email: string; displayName: string; roleCodes: string[]; branchIds: string[]; }
+export interface AuthenticatedRequest { user?: AuthUser; requestId?: string; }
